@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Shop = () => {
+const Shop = () => {
   return (
     <div>
     <div className="grid-Container">
