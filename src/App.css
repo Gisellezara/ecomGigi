@@ -49,6 +49,7 @@ footer {
   border: 15px salmon;
   color: white;
   text-align: center;
+  position: absolute;
 }
 
 /* .footer{

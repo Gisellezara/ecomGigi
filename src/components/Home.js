@@ -1,4 +1,5 @@
 import React from 'react'
+import SlideShow from './SlideShow';
 
 const Home = () => {
   return (
@@ -14,46 +15,10 @@ const Home = () => {
              has grown through the years. The owner is Giselle Guevara. She was fascinated by buying cups while traveling, 
              which sparked her interest in selling and designing each cup displayed on this website.
           </p>  
-  {/* // array for slider images */}
-const productArray = [
-  {
-   <img src= "img/flower.webp"/>
-  },
-  {
-    <img src= "img/hero.jpeg"/>
-  },
-  {
-    <img src= "img/vday.jpg"/>
-  },
-];
           
-               
-  </div>
-  
-   
-
-  )};
- 
-
-const slideShow = () =>{
-  const settings = {
-    infinite: true,
-    speed: 550,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-  };
-
-  //goes through our list one by one and returns a product componet for us
-  const sliderProducts = productArray.map((product) => (
-    <Product image={product.image} title={product.title} />
-  ));
-
-  return (
-    <Slider className="slider" {...settings}>
-      {sliderProducts}
-    </Slider>
-  )
+          <SlideShow/>
+          </div>
+ )
 };
 
 

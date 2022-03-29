@@ -10,9 +10,9 @@ const Contact = () => {
           </h3>
           <input type="text" name="firstname" placeholder="Full Name" />
           <br />
-          <input type="text" name="Phone Number" placeholder="Phone Number" />
+          <input type="number" name="Phone Number" placeholder="Phone Number" />
           <br />
-          <input type="text" name="Email" placeholder="Email" />
+          <input type="email" name="Email" placeholder="Email" />
           <br />
           <input type="text" name="Comment" placeholder="Comment" />
           <br />
@@ -24,6 +24,8 @@ const Contact = () => {
       </div>
     </div>
   )
+  
 };
+
 
 export default Contact;
