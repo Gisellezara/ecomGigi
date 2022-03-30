@@ -21,6 +21,9 @@ const Contact = () => {
             <i> Hope to hear from you!</i>
           </h4>
         </form>
+        <br />
+        <br />
+        <br />
       </div>
     </div>
   )

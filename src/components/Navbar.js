@@ -3,9 +3,7 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Outlet,
-  Link,
-  useRouteMatch,
-  useParams,
+
 } from "react-router-dom";
 
 const Navbar = () => {
