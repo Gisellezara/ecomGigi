@@ -4,6 +4,7 @@ const mysql= require('mysql');
 
 
 const app = express();
+app.use(cors());
 //conaction to connect to mysql 
 const db =mysql.createConnection({
     host: 'localhost',
@@ -31,7 +32,7 @@ app.get('/Products', (req, res)=>{
     })
 })
 
-app.use(cors());
+
 app.use(express.json());
 
 app.listen(4002, ()=>{

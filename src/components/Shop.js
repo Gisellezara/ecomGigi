@@ -1,46 +1,44 @@
-import React from 'react';
+import React from "react";
 
-class Products extends React.Component{
-    constructor(props){
-        super(props);
-        this.state={Products: []}
-    }
-    componentDidMount(){
-        console.log('Testing?');
-        fetch('http://localhost:4002/Products').then((response)=>{
-            console.log(response.status);
-            return response.json();
-        },
-        (error)=>{
-            this.setState({error:error});
-            console.log(error.status)
-        }
-        )
-        .then((data)=>{
-            console.log(data)
-            this.setState({Products:data})
-        });
-    }
-    render(){
-        const allProducts= this.state.Products.map((Products, index)=>{
-            return (
-                <Products
-                key={index}
-                image={Products.image}
-                item_description = {Products.item_description}
-                color ={Products.color}
-                material ={Products.material}
-                size ={Products.size}
-                price={Products.price}
-                />
-            )
-        })
-        return <div>{allProducts}</div>
-        
-    }
+import Products from "./Products";
+
+class Shop extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { Products: [] };
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:4002/Products")
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({ Products: data });
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  
+  }
+  render() {
+    const allProducts = this.state.Products.map((prod, index) => (
+     
+     
+           
+        <Products
+          key={index}
+          item_description={prod.item_description}
+          color={prod.color}
+          material={prod.material}
+          size={prod.size}
+          price={prod.price}
+        />
+      
+      
+    ));
+    console.log(allProducts)
+    return (<>{allProducts}</>);
+  }
 }
-
-
 
 // const Shop = () => {
 //   return (
@@ -91,7 +89,7 @@ class Products extends React.Component{
 //         <p>Disposable Cup 24oz</p>
 //         <button>Buy Now</button>
 //         </div>
-//     </div> 
+//     </div>
 //     <div className="shopp">
 //         <img src="img/hallo.jpeg" alt="Black Cup"/>
 //         <div className="cardcon">
@@ -145,7 +143,7 @@ class Products extends React.Component{
 //         <p>Disposable Cup 20oz</p>
 //         <button>Buy Now</button>
 //         </div>
-//     </div> 
+//     </div>
 //     <div className="shopp">
 //         <img src="img/vdayyy.jpg" alt="Heart Cup"/>
 //         <div className="cardcon">
@@ -155,11 +153,10 @@ class Products extends React.Component{
 //         <button>Buy Now</button>
 //         </div>
 //     </div>
-    
-//     </div> 
+
+//     </div>
 
 //     </div>
 //   )
 // }
-
 export default Shop;

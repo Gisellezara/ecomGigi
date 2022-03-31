@@ -6,6 +6,7 @@ import Shop from './components/Shop';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Products from './components/Products'
+
 // import SlideShow from './components/SlideShow';
 // import { Router } from 'express';
 // import { Routes } from 'react-router-dom';
