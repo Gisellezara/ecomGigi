@@ -36,7 +36,12 @@ class Shop extends React.Component {
       
     ));
     console.log(allProducts)
-    return (<>{allProducts}</>);
+    return (
+    <div className="grid-Container"> 
+    
+    {allProducts}
+    </div>
+    );
   }
 }
 
